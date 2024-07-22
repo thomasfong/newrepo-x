@@ -24,13 +24,13 @@ importers:
         specifier: ^1.4.6
         version: 1.4.6
       dotenv:
-        specifier: ^16.0.3
+        specifier: ^16.4.5
         version: 16.4.5
       ejs:
-        specifier: ^3.1.9
+        specifier: ^3.1.10
         version: 3.1.10
       express:
-        specifier: ^4.18.2
+        specifier: ^4.19.2
         version: 4.19.2
       express-ejs-layouts:
         specifier: ^2.5.1
@@ -39,16 +39,16 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       express-session:
-        specifier: ^1.17.3
+        specifier: ^1.18.0
         version: 1.18.0
       express-validator:
         specifier: ^6.15.0
         version: 6.15.0
       jsonwebtoken:
-        specifier: ^9.0.0
+        specifier: ^9.0.2
         version: 9.0.2
       pg:
-        specifier: ^8.11.0
+        specifier: ^8.12.0
         version: 8.12.0
     devDependencies:
       nodemon:
@@ -344,8 +344,8 @@ packages:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
 
-  jake@10.9.1:
-    resolution: {integrity: sha512-61btcOHNnLnsOdtLgA5efqQWjnSi/vow5HbI7HMdKKWqvrKR1bLK3BPlJn9gcSaP2ewuamUSMB5XEy76KUIS2w==}
+  jake@10.9.2:
+    resolution: {integrity: sha512-2P4SQ0HrLQ+fw6llpLnOaGAvN2Zu6778SJMrCUwns4fOoG9ayrTiZk3VV8sCPkVZF8ab0zksVpS8FDY5pRCNBA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -828,7 +828,7 @@ snapshots:
 
   ejs@3.1.10:
     dependencies:
-      jake: 10.9.1
+      jake: 10.9.2
 
   encodeurl@1.0.2: {}
 
@@ -991,7 +991,7 @@ snapshots:
 
   is-number@7.0.0: {}
 
-  jake@10.9.1:
+  jake@10.9.2:
     dependencies:
       async: 3.2.5
       chalk: 4.1.2
