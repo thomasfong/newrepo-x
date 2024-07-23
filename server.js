@@ -12,6 +12,9 @@ const app = express()
 const static = require("./routes/static")
 const baseController = require("./controllers/baseController")
 
+// Inventory routes
+app.use("/inv", inventoryRoute)
+
 /* ***********************
  * View Engine and Templates
  *************************/
