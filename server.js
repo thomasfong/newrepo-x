@@ -27,9 +27,24 @@ app.set("layout", "./layouts/layout") // not at views root
  * Routes
  *************************/
 app.use(require("./routes/static"))
+
 // Index route
 app.get("/", baseController.buildHome)
 app.use("/inv", require("./routes/inventoryRoute"))
+
+/* ***********************
+* Express Error Handler
+* Place after all other middleware
+*************************/
+app.use(async (err, req, res, next) => {
+  let nav = await utilities.getNav()
+  console.error(`Error at: "${req.originalUrl}": ${err.message}`)
+  res.render("errors/error", {
+    title: err.status || 'Server Error',
+    message: err.message,
+    nav
+  })
+})
 
 /* ***********************
  * Local Server Information
@@ -38,9 +53,12 @@ app.use("/inv", require("./routes/inventoryRoute"))
 const port = process.env.PORT
 const host = process.env.HOST
 
+
 /* ***********************
  * Log statement to confirm server operation
  *************************/
 app.listen(port, () => {
   console.log(`app listening on ${host}:${port}`)
 })
+
+
